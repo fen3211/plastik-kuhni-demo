@@ -1,0 +1,129 @@
+<!-- Quick Order / Product Modal Backdrop -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm transition-opacity duration-200" id="quick-order-modal">
+<!-- Modal Dialog Container -->
+<div class="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto rounded-3xl bg-white dark:bg-[#15181E] border border-black/10 dark:border-white/10 shadow-2xl p-6 sm:p-8 transform transition-all duration-200 scale-95 opacity-0" id="modal-container">
+<!-- Header: Title + Close Button -->
+<div class="flex items-start justify-between pb-4 mb-5 border-b border-gray-100 dark:border-white/10">
+<div>
+<h2 class="text-2xl font-display font-bold text-gray-900 dark:text-white" id="modal-title">
+          Кухня Дарк Грей
+        </h2>
+<span class="text-xs text-gray-400">Конфигурация модели и выбор подарка</span>
+</div>
+<button aria-label="Закрыть" class="p-2 rounded-xl text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition" id="modal-close-btn">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<!-- Top Product Overview: Photo + Price -->
+<div class="flex flex-col sm:flex-row items-center gap-6 mb-6 pb-6 border-b border-gray-100 dark:border-white/10">
+<div class="relative w-full sm:w-48 aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100 shrink-0">
+<img alt="" class="w-full h-full object-cover" id="modal-image" src=""/>
+<span class="absolute top-2 left-2 px-2.5 py-0.5 rounded-full bg-rose-600 text-white text-[10px] font-bold uppercase tracking-wider">
+          Лидер продаж!
+        </span>
+</div>
+<div class="flex-1">
+<span class="text-xs text-gray-400 block mb-0.5">Ориентировочная стоимость:</span>
+<div class="text-3xl font-display font-extrabold text-luxury-gold tracking-tight" id="modal-price">
+          от 178 000 руб
+        </div>
+<div class="mt-2 text-xs text-gray-500 space-y-0.5">
+<p><span class="text-gray-400">Срок сборки:</span> 14 рабочих дней</p>
+<p><span class="text-gray-400">Гарантия:</span> 2 года по официальному договору</p>
+</div>
+</div>
+</div>
+<!-- Configurator Options -->
+<div class="space-y-6 mb-8 text-sm">
+<!-- Option 1: Материал фасада -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-rose-600 mb-2">
+          Материал фасада
+        </label>
+<div class="flex flex-wrap gap-2" id="modal-facade-options">
+<button class="opt-chip active px-3.5 py-2 rounded-xl text-xs font-medium border border-luxury-gold bg-luxury-gold/15 text-gray-900 dark:text-white transition" data-diff="0" type="button">
+            Пластик HPL
+          </button>
+<button class="opt-chip px-3.5 py-2 rounded-xl text-xs font-medium border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:border-gray-400 transition" data-diff="19440" type="button">
+            Эмаль (+19 440 руб)
+          </button>
+<button class="opt-chip px-3.5 py-2 rounded-xl text-xs font-medium border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:border-gray-400 transition" data-diff="-22680" type="button">
+            Пленка ПВХ (-22 680 руб)
+          </button>
+</div>
+</div>
+<!-- Option 2: Направляющие -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-rose-600 mb-2">
+          Направляющие и доводчики
+        </label>
+<div class="flex flex-wrap gap-2" id="modal-hw-options">
+<button class="opt-chip active px-3.5 py-2 rounded-xl text-xs font-medium border border-luxury-gold bg-luxury-gold/15 text-gray-900 dark:text-white transition" type="button">
+            Направляющие Blum (Австрия)
+          </button>
+<button class="opt-chip px-3.5 py-2 rounded-xl text-xs font-medium border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:border-gray-400 transition" type="button">
+            Направляющие Boyard (Комфорт)
+          </button>
+</div>
+</div>
+<!-- Option 3: Выбирайте свой подарок! -->
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-rose-600 mb-2 flex items-center gap-1.5">
+<i class="w-4 h-4" data-lucide="gift"></i>
+          Выбирайте свой подарок!
+        </label>
+<div class="flex flex-wrap gap-2" id="modal-gift-options">
+<button class="opt-gift-chip active px-3 py-1.5 rounded-xl text-xs border border-emerald-600 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 font-semibold transition" type="button">
+            ✓ Мойка из искусственного камня
+          </button>
+<button class="opt-gift-chip px-3 py-1.5 rounded-xl text-xs border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:border-gray-400 transition" type="button">
+            Мойка из нержавеющей стали
+          </button>
+<button class="opt-gift-chip px-3 py-1.5 rounded-xl text-xs border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:border-gray-400 transition" type="button">
+            Сушка 2-уровневая
+          </button>
+<button class="opt-gift-chip px-3 py-1.5 rounded-xl text-xs border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:border-gray-400 transition" type="button">
+            Бутылочница с доводчиком
+          </button>
+<button class="opt-gift-chip px-3 py-1.5 rounded-xl text-xs border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:border-gray-400 transition" type="button">
+            Доводчики на ящики 3 шт.
+          </button>
+<button class="opt-gift-chip px-3 py-1.5 rounded-xl text-xs border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:border-gray-400 transition" type="button">
+            Стеновые панели 2 шт.
+          </button>
+<button class="opt-gift-chip px-3 py-1.5 rounded-xl text-xs border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-gray-600 dark:text-gray-400 hover:border-gray-400 transition" type="button">
+            Столешница пластиковая влагостойкая
+          </button>
+</div>
+</div>
+</div>
+<!-- Quick Order Form -->
+<div class="pt-6 border-t border-gray-100 dark:border-white/10">
+<h4 class="text-sm font-bold text-gray-900 dark:text-white mb-4">
+        Контактные данные
+      </h4>
+<form class="space-y-3" id="modal-order-form" onsubmit="event.preventDefault(); handleModalSubmit();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm text-gray-900 dark:text-white focus:outline-none focus:border-luxury-gold" id="order-name" placeholder="Ваше имя*" required="" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm text-gray-900 dark:text-white focus:outline-none focus:border-luxury-gold" id="order-phone" placeholder="Контактный телефон*" required="" type="tel"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm text-gray-900 dark:text-white focus:outline-none focus:border-luxury-gold" id="order-email" placeholder="Ваш e-mail" type="email"/>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm text-gray-900 dark:text-white focus:outline-none focus:border-luxury-gold" id="order-comment" placeholder="Комментарий к заказу" type="text"/>
+</div>
+<div class="flex items-center gap-2 pt-1 text-xs text-gray-400">
+<input checked="" class="rounded accent-amber-600" id="order-agree" required="" type="checkbox"/>
+<label class="cursor-pointer" for="order-agree">
+            Я прочитал и согласен с условиями <a class="underline text-luxury-gold" href="../about/index.html">обработки данных</a>
+</label>
+</div>
+<div class="pt-3">
+<button class="w-full py-4 px-6 rounded-2xl bg-blue-700 hover:bg-blue-800 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-lg" type="submit">
+<i class="w-4 h-4" data-lucide="shopping-cart"></i>
+<span>Оформить заказ с подарком</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>

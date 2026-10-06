@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="theme-light" lang="ru">
+<head><script src="/plastik-kuhni-demo/assets/js/demo.js"></script>
+<link href="/plastik-kuhni-demo/assets/css/tailwind.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title id="page-title">Кухня на заказ — Фабрика «Пластик Кухни» Москва</title>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+<link href="../assets/css/product.css" rel="stylesheet"/>
+<script>try { const dark = localStorage.getItem("pk_theme") === "dark"; document.documentElement.classList.toggle("dark", dark); document.documentElement.classList.toggle("theme-light", !dark); } catch {}</script>
+<script src="/plastik-kuhni-demo/assets/js/vendor/lucide.js"></script>
+<link href="/plastik-kuhni-demo/assets/css/layout.css" rel="stylesheet"/>
+<meta content="noindex, nofollow" name="robots"/><link href="/plastik-kuhni-demo/assets/css/demo.css" rel="stylesheet"/></head>
+<body class="product-page bg-[#F4EFEB] dark:bg-[#0A0C0E] text-[#121417] dark:text-white min-h-screen flex flex-col font-sans transition-colors duration-200"><div class="demo-notice">Демонстрация обновления сайта · Формы работают в режиме предпросмотра</div>
+<!-- ========================================================
+       TOP NOTIFICATION BAR
+       ======================================================== -->
+<div class="project-notice">Кухни по вашим размерам <span>•</span> Бесплатный замер и 3D-проект</div>
+<!-- ========================================================
+       NAVIGATION BAR
+       ======================================================== -->
+<header class="factory-header">
+<div class="factory-header-inner"><a aria-label="Пластик Кухни — главная" class="factory-brand" href="/plastik-kuhni-demo/index.html"><img alt="Пластик Кухни — фабрика кухонь на заказ" height="60" src="/plastik-kuhni-demo/assets/images/logo.svg" width="160"/></a>
+<nav aria-label="Главное меню" class="factory-nav"><a href="/plastik-kuhni-demo/catalog/index.html">Кухни</a><a href="/plastik-kuhni-demo/works/index.html">Наши работы</a><a href="/plastik-kuhni-demo/reviews/index.html">Отзывы</a><a href="/plastik-kuhni-demo/about/index.html">О фабрике</a><a href="/plastik-kuhni-demo/contacts/index.html">Контакты</a></nav>
+<div class="factory-header-actions"><button aria-label="Сменить тему" class="theme-toggle factory-icon-button"><i data-lucide="moon"></i></button>
+<a class="factory-header-cta" href="/plastik-kuhni-demo/calculator/index.html">Рассчитать кухню <span aria-hidden="true">↗</span></a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Открыть меню" class="factory-icon-button factory-menu-button" id="mobile-menu-btn"><i data-lucide="menu"></i></button></div>
+</div>
+<nav aria-label="Мобильное меню" class="factory-mobile-menu hidden" hidden="" id="mobile-menu"><a href="/plastik-kuhni-demo/catalog/index.html">Кухни</a><a href="/plastik-kuhni-demo/works/index.html">Наши работы</a><a href="/plastik-kuhni-demo/reviews/index.html">Отзывы</a><a href="/plastik-kuhni-demo/about/index.html">О фабрике</a><a href="/plastik-kuhni-demo/contacts/index.html">Контакты</a><a href="/plastik-kuhni-demo/calculator/index.html">Рассчитать кухню</a><div class="factory-socials"><a data-social="social_max" href="https://max.ru/u/f9LHodD0cOIErdrQV2a9cspww5Outjv1wJsSs37qvIvRwWIZBcXs2tvoDYM" rel="noopener noreferrer" target="_blank">MAX<span aria-hidden="true"> ↗</span></a><a data-social="social_ok" href="https://ok.ru/plastikkuhni" rel="noopener noreferrer" target="_blank">Одноклассники<span aria-hidden="true"> ↗</span></a><a data-social="social_vk" href="https://vk.com/plastikkuhni" rel="noopener noreferrer" target="_blank">ВКонтакте<span aria-hidden="true"> ↗</span></a><a data-social="social_telegram" href="https://t.me/plastickuhni" rel="noopener noreferrer" target="_blank">Telegram<span aria-hidden="true"> ↗</span></a></div></nav>
+</header>
+<!-- ========================================================
+       BREADCRUMBS
+       ======================================================== -->
+<section class="pt-6 pb-4 border-b border-luxury-subtle bg-black/[0.02] dark:bg-white/[0.02]">
+<div class="max-w-7xl mx-auto px-6">
+<nav class="flex items-center gap-2 text-xs text-gray-400">
+<a class="hover:text-luxury-gold transition" href="../index.html">Главная</a>
+<span>/</span>
+<a class="hover:text-luxury-gold transition" href="../catalog/index.html">Каталог кухонь</a>
+<span>/</span>
+<span class="text-gray-700 dark:text-gray-200 font-semibold" id="breadcrumb-title">Загрузка...</span>
+</nav>
+</div>
+</section>
+<!-- ========================================================
+       MAIN PRODUCT HERO: GALLERY & CONFIGURATOR
+       ======================================================== -->
+<main>
+<div class="project-error" hidden="" id="product-error" role="alert">
+<h1>Проект не найден</h1><p>Проверьте ссылку или выберите кухню в каталоге.</p>
+<a class="btn-primary" href="../catalog/index.html">Вернуться в каталог</a>
+</div>
+<section class="project-hero" id="product-hero">
+<div class="project-layout">
+<div class="project-gallery">
+<button aria-label="Открыть фото кухни на весь экран" class="project-photo" id="product-photo-open" type="button">
+<img alt="Фотография проекта" fetchpriority="high" height="750" id="product-main-img" width="1000"/>
+<span class="project-photo-top"><span id="product-badge-category">Кухня на заказ</span><span class="hidden" id="product-badge-discount">Скидка</span></span>
+<span class="project-photo-zoom"><i class="w-4 h-4" data-lucide="expand"></i> Смотреть фото</span>
+</button>
+<div class="project-gallery-toolbar">
+<span><strong id="gallery-total-count">—</strong> фотографий проекта</span>
+<button aria-controls="product-thumbnails-grid" aria-expanded="false" id="toggle-gallery-grid-btn" type="button"><i class="w-4 h-4" data-lucide="layout-grid"></i><span id="gallery-toggle-label">Показать все</span></button>
+</div>
+<div class="project-thumbnails custom-scrollbar" id="product-thumbnails"></div>
+<div class="hidden grid grid-cols-3 sm:grid-cols-5 gap-2" id="product-thumbnails-grid"></div>
+<div class="project-at-a-glance">
+<div><span>Общая длина</span><strong id="spec-length">—</strong></div>
+<div><span>Форма кухни</span><strong id="spec-shape">—</strong></div>
+<div><span>Фасады проекта</span><strong id="spec-facade">—</strong></div>
+<div><span>Цена за пог. метр</span><strong id="spec-meter-price">—</strong></div>
+</div>
+<div class="project-dimensions"><span>Глубина нижних / верхних секций: <strong id="spec-depth">—</strong></span><span>Высота по столешнице: <strong id="spec-height">—</strong></span></div>
+</div>
+<div class="project-purchase">
+<div class="project-eyebrow">Проект фабрики / Под ваши размеры</div>
+<h1 id="product-title">Загрузка проекта…</h1>
+<p class="project-intro" id="product-short-desc"></p>
+<div class="project-buybox">
+<div class="project-price-label">Стоимость проекта</div>
+<div class="project-price-line"><strong id="product-price">—</strong><span class="hidden" id="product-old-price"></span></div>
+<p class="project-price-note"><span id="product-meter-price">—</span> за погонный метр. Точная смета — после замера и выбора комплектации.</p>
+<div class="project-options-block"><h2>Материал фасада</h2><div class="project-options" id="detail-facade-options"></div></div>
+<div class="project-options-block"><h2>Направляющие</h2><div class="project-options" id="detail-hardware-options"></div></div>
+<details class="project-gifts"><summary><span><i class="w-4 h-4" data-lucide="gift"></i> Выбрать подарок</span><i class="w-4 h-4" data-lucide="chevron-down"></i></summary><div class="project-options" id="detail-gift-options"></div></details>
+<button class="btn-primary project-order" id="btn-quick-order-trigger" type="button"><span>Рассчитать эту кухню</span><i class="w-5 h-5" data-lucide="arrow-up-right"></i></button>
+<a class="project-calculator" href="../calculator/index.html" id="btn-calc-direct-link">Самостоятельный расчёт <i class="w-4 h-4" data-lucide="arrow-right"></i></a>
+</div>
+<div class="project-service"><span><i class="w-4 h-4" data-lucide="ruler"></i> Бесплатный замер</span><span><i class="w-4 h-4" data-lucide="shield-check"></i> Гарантия 2 года</span><span><i class="w-4 h-4" data-lucide="box"></i> 3D-проект</span></div>
+</div>
+</div>
+</section>
+<!-- ========================================================
+       PRODUCT INFORMATION TABS (100% AUTHENTIC PARITY)
+       1. Описание (6 Badges + Video Review + Description Text)
+       2. Характеристики (Full 15-item table with ? tooltips)
+       3. Отзывов (0) (Reviews list + Write review modal/form)
+       4. Информация к заказу (Factory precision sizing & specs)
+       ======================================================== -->
+<section class="project-information py-12 border-t border-luxury-subtle" id="product-information">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Tab Navigation Buttons -->
+<div class="flex items-center gap-2 overflow-x-auto border-b border-luxury-subtle pb-px mb-8 custom-scrollbar" id="product-tab-nav" role="tablist">
+<button aria-controls="pane-description" aria-selected="true" class="product-tab-btn active px-6 py-3.5 rounded-t-2xl border-t border-x border-luxury-subtle bg-white dark:bg-[#12151B] text-gray-900 dark:text-white font-bold text-sm sm:text-base flex items-center gap-2.5 transition shadow-sm -mb-px" id="tab-btn-description" role="tab" type="button">
+<i class="w-4 h-4 text-luxury-gold" data-lucide="file-text"></i>
+<span>Описание</span>
+</button>
+<button aria-controls="pane-specifications" aria-selected="false" class="product-tab-btn px-6 py-3.5 rounded-t-2xl border-t border-x border-transparent hover:border-luxury-subtle bg-black/[0.02] dark:bg-white/[0.02] text-gray-500 hover:text-gray-900 dark:hover:text-white font-semibold text-sm sm:text-base flex items-center gap-2.5 transition" id="tab-btn-specifications" role="tab" type="button">
+<i class="w-4 h-4 text-luxury-gold" data-lucide="list"></i>
+<span>Характеристики</span>
+</button>
+<button aria-controls="pane-reviews" aria-selected="false" class="product-tab-btn px-6 py-3.5 rounded-t-2xl border-t border-x border-transparent hover:border-luxury-subtle bg-black/[0.02] dark:bg-white/[0.02] text-gray-500 hover:text-gray-900 dark:hover:text-white font-semibold text-sm sm:text-base flex items-center gap-2.5 transition" id="tab-btn-reviews" role="tab" type="button">
+<i class="w-4 h-4 text-luxury-gold" data-lucide="message-square"></i>
+<span>Отзывов (<span id="reviews-count-badge">0</span>)</span>
+</button>
+<button aria-controls="pane-order-info" aria-selected="false" class="product-tab-btn px-6 py-3.5 rounded-t-2xl border-t border-x border-transparent hover:border-luxury-subtle bg-black/[0.02] dark:bg-white/[0.02] text-gray-500 hover:text-gray-900 dark:hover:text-white font-semibold text-sm sm:text-base flex items-center gap-2.5 transition" id="tab-btn-order-info" role="tab" type="button">
+<i class="w-4 h-4 text-luxury-gold" data-lucide="info"></i>
+<span>Информация к заказу</span>
+</button>
+</div>
+<!-- Tab Panes Container -->
+<div id="product-tab-content">
+<!-- PANE 1: ОПИСАНИЕ -->
+<div aria-labelledby="tab-btn-description" class="product-tab-pane space-y-8" id="pane-description" role="tabpanel">
+<div class="project-benefits" id="product-benefits"></div>
+<!-- Video Title & Player Container -->
+<div class="space-y-4" hidden="" id="product-video-section">
+<h3 class="text-xl sm:text-2xl font-bold font-display text-gray-900 dark:text-white" id="tab-video-title">
+              Видеообзор модели
+            </h3>
+<div class="relative aspect-video rounded-3xl overflow-hidden glass-panel border border-luxury-subtle shadow-2xl max-w-4xl">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" hidden="" id="product-video-iframe" loading="lazy" title="Видеообзор кухни"></iframe>
+<button aria-label="Смотреть видеообзор кухни" class="project-video-play" id="product-video-play" type="button"><span class="project-play-icon">▶</span><span>Смотреть видеообзор</span></button>
+</div>
+</div>
+<!-- Description Paragraphs -->
+<div class="space-y-4 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300 max-w-4xl pt-4" id="product-full-desc">
+<!-- Populated via JS with authentic paragraphs -->
+</div>
+</div>
+<!-- PANE 2: ХАРАКТЕРИСТИКИ (15 Items with ? Tooltips) -->
+<div aria-labelledby="tab-btn-specifications" class="product-tab-pane hidden" id="pane-specifications" role="tabpanel">
+<div class="max-w-4xl glass-panel rounded-3xl border border-luxury-subtle overflow-hidden">
+<div class="p-6 bg-black/[0.02] dark:bg-white/[0.02] border-b border-luxury-subtle flex items-center justify-between">
+<h3 class="font-display font-bold text-lg text-gray-900 dark:text-white">
+                Технические характеристики гарнитура
+              </h3>
+<span class="text-xs text-gray-500">
+                Нажмите на <strong class="text-luxury-gold">?</strong> для пояснения параметра
+              </span>
+</div>
+<div class="divide-y divide-gray-100 dark:divide-white/5" id="specs-table-container">
+<!-- Dynamically populated from p.detailed_specs -->
+</div>
+</div>
+</div>
+<!-- PANE 3: ОТЗЫВОВ (0) -->
+<div aria-labelledby="tab-btn-reviews" class="product-tab-pane hidden space-y-6" id="pane-reviews" role="tabpanel">
+<div class="flex items-center justify-between pb-4 border-b border-luxury-subtle">
+<div>
+<h3 class="font-display font-bold text-xl text-gray-900 dark:text-white">
+                Отзывы покупателей
+              </h3>
+<p class="text-xs text-gray-500 mt-0.5">
+                Отзывы об этой модели
+              </p>
+</div>
+<button class="px-5 py-2.5 rounded-xl bg-luxury-gold hover:bg-luxury-gold-hover text-white text-xs sm:text-sm font-bold transition shadow-md flex items-center gap-2 cursor-pointer" id="btn-open-review-modal" type="button">
+<i class="w-4 h-4" data-lucide="edit-3"></i>
+<span>Написать отзыв</span>
+</button>
+</div>
+<!-- Reviews List or Empty State -->
+<div id="reviews-list-container">
+<div class="py-12 text-center text-gray-400 text-sm" id="reviews-empty-state">
+              Нет отзывов об этом товаре.
+            </div>
+<div class="space-y-4 hidden" id="reviews-items-wrapper">
+<!-- Cards rendered via JS -->
+</div>
+</div>
+</div>
+<!-- PANE 4: ИНФОРМАЦИЯ К ЗАКАЗУ -->
+<div aria-labelledby="tab-btn-order-info" class="product-tab-pane hidden space-y-5 text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300 max-w-4xl" id="pane-order-info" role="tabpanel">
+<p>
+            Данная модель может быть выполнена в любом цвете и любой комплектации на выбор заказчика. Фасады данной кухни можно изготовить из любого доступного материала – из глянцевой, матовой, суперматовой пленки ПВХ, из глянцевого, матового, суперматового пластика Hpl, из глянцевой, матовой, суперматовой эмали, а также из массива натурального дуба или ясеня. Пленка пвх и пластик hpl могут быть выполнены в цвете «металлик», а также и с некоторыми фантазийными декорами.
+          </p>
+<p>
+            Любой линейный размер мебели может быть изменен произвольно на нужный с точностью до 5 мм. Исключения связаны лишь с размерами используемой бытовой техники. Оснащение комплектующими, посудосушителями, мойками, смесителями, выдвижными механизмами, ручками, петлями, интегрированной светодиодной подсветкой, выдвижными сетками, лотками и организациями для столовых приборов, гигиеническими поддонами, водоотбойниками, цокольными планками, декоративными опорами, выдвижными мусорными контейнерами и прочим – осуществляется по выбору заказчика.
+          </p>
+<p>
+            Позиций для выбора – свыше 1000. В своих изделиях мы используем фурнитуру таких известных производителей как Boyard, Firmax, Blum, Hettich и других. В данной модели также можно использовать фурнитуру любого производителя.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================
+       SIMILAR / RELATED KITCHENS
+       ======================================================== -->
+<section class="py-14 border-t border-luxury-subtle bg-black/[0.02] dark:bg-white/[0.02]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between mb-8 pb-3 border-b border-luxury-subtle">
+<div>
+<div class="gold-badge mb-1">Рекомендации фабрики</div>
+<h2 class="font-display text-2xl font-bold text-gray-900 dark:text-white">
+            Похожие проекты кухонь
+          </h2>
+</div>
+<a class="text-xs font-bold text-luxury-gold hover:underline" href="../catalog/index.html">
+          Весь каталог (181) →
+        </a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="similar-products-grid">
+<!-- Rendered via JS -->
+</div>
+</div>
+</section>
+<!-- ========================================================
+       FAQ (AUTHENTIC FACTORY QUESTIONS)
+       ======================================================== -->
+<section class="py-14 border-t border-luxury-subtle">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-10">
+<div class="gold-badge mb-2">Ответы на вопросы</div>
+<h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+          Часто задаваемые вопросы
+        </h2>
+<p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Все нюансы заказа, замеров, сроков изготовления и гарантии на фабрике
+        </p>
+</div>
+<div class="space-y-3" id="faq-accordion-container">
+<!-- Rendered dynamically from data/faq.json -->
+</div>
+</div>
+</section>
+<!-- ========================================================
+       FINAL MEASUREMENT CALL-TO-ACTION FORM
+       ======================================================== -->
+<section class="py-16 border-t border-luxury-subtle bg-luxury-dark text-white">
+<div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+<div class="gold-badge mx-auto">Бесплатный выезд технолога</div>
+<h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white">
+        Хотите такую же кухню по вашим размерам?
+      </h2>
+<p class="text-sm text-gray-400 max-w-xl mx-auto">
+        Дизайнер-замерщик приедет со всеми каталогами фасадов, образцами камня и фурнитуры, снимет точные размеры лазерным дальномером и составит 3D-проект.
+      </p>
+<form class="max-w-xl mx-auto space-y-3 text-left" id="cta-lead-form">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<input aria-label="Ваше имя" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-luxury-gold" id="cta-name" placeholder="Ваше имя*" required="" type="text"/>
+<input aria-label="Телефон для связи" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 text-sm focus:outline-none focus:border-luxury-gold" id="cta-phone" placeholder="Телефон для связи*" required="" type="tel"/>
+</div>
+<div class="text-xs font-bold py-1 hidden text-center" id="cta-form-feedback"></div>
+<button class="w-full py-4 px-6 rounded-2xl bg-luxury-gold hover:bg-luxury-gold-hover text-white font-bold text-sm transition shadow-xl flex items-center justify-center gap-2" id="cta-submit-btn" type="submit">
+<i class="w-4 h-4" data-lucide="calendar"></i>
+<span>Записаться на бесплатный замер и дизайн-проект</span>
+</button>
+</form>
+</div>
+</section>
+<!-- ========================================================
+       QUICK ORDER MODAL (POPUP)
+       ======================================================== -->
+<div aria-labelledby="modal-kitchen-title" aria-modal="true" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" id="quick-order-modal" role="dialog">
+<div class="glass-panel w-full max-w-lg p-6 sm:p-8 rounded-3xl border border-luxury-subtle shadow-2xl max-h-[90vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-luxury-subtle">
+<div>
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white" id="modal-kitchen-title">Кухня на заказ</h3>
+<span class="text-xs text-gray-400">Оставьте контакты для расчёта проекта</span>
+</div>
+<button aria-label="Закрыть форму расчёта" class="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white rounded-lg" id="modal-close-btn" type="button">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<div class="p-4 rounded-2xl bg-luxury-gold/10 border border-luxury-gold/20 mb-5 text-xs space-y-1">
+<div class="flex justify-between"><span class="text-gray-500">Модель:</span> <strong class="text-gray-900 dark:text-white" id="modal-summary-title">—</strong></div>
+<div class="flex justify-between"><span class="text-gray-500">Материал:</span> <strong class="text-luxury-gold" id="modal-summary-facade">—</strong></div>
+<div class="flex justify-between"><span class="text-gray-500">Подарок:</span> <strong class="text-emerald-600" id="modal-summary-gift">—</strong></div>
+<div class="flex justify-between pt-1 border-t border-luxury-gold/20"><span class="text-gray-500">Итоговая стоимость:</span> <strong class="text-luxury-gold text-sm font-bold" id="modal-summary-price">—</strong></div>
+</div>
+<form class="space-y-3.5 text-xs" id="product-quick-form">
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300" for="modal-lead-name">Ваше имя*</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="modal-lead-name" placeholder="Иван" required="" type="text"/>
+</div>
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300" for="modal-lead-phone">Контактный телефон*</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="modal-lead-phone" placeholder="+7 (999) 000-00-00" required="" type="tel"/>
+</div>
+<div class="text-xs font-bold py-1 hidden" id="modal-form-feedback"></div>
+<button class="w-full py-4 px-6 rounded-2xl bg-luxury-gold hover:bg-luxury-gold-hover text-white font-bold text-sm transition shadow-lg flex items-center justify-center gap-2" id="modal-submit-btn" type="submit">
+<i class="w-4 h-4" data-lucide="check"></i>
+<span>Получить расчёт</span>
+</button>
+</form>
+</div>
+</div>
+<!-- ========================================================
+       REVIEW MODAL (SUBMIT FEEDBACK)
+       ======================================================== -->
+<div aria-labelledby="review-modal-kitchen-title" aria-modal="true" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" id="review-modal" role="dialog">
+<div class="glass-panel w-full max-w-lg p-6 sm:p-8 rounded-3xl border border-luxury-subtle shadow-2xl max-h-[90vh] overflow-y-auto">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-luxury-subtle">
+<div>
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white">Написать отзыв</h3>
+<span class="text-xs text-gray-400" id="review-modal-kitchen-title">Кухня Гранд</span>
+</div>
+<button aria-label="Закрыть форму отзыва" class="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white rounded-lg" id="review-modal-close" type="button">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<form class="space-y-4 text-xs" id="product-review-form">
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300" for="review-input-author">Ваше имя*</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="review-input-author" placeholder="Анна Смирнова" required="" type="text"/>
+</div>
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300">Оценка гарнитура*</label>
+<div class="flex items-center gap-1.5" id="review-rating-stars">
+<button class="star-btn text-2xl text-luxury-gold cursor-pointer hover:scale-110 transition" data-val="1" type="button">★</button>
+<button class="star-btn text-2xl text-luxury-gold cursor-pointer hover:scale-110 transition" data-val="2" type="button">★</button>
+<button class="star-btn text-2xl text-luxury-gold cursor-pointer hover:scale-110 transition" data-val="3" type="button">★</button>
+<button class="star-btn text-2xl text-luxury-gold cursor-pointer hover:scale-110 transition" data-val="4" type="button">★</button>
+<button class="star-btn text-2xl text-luxury-gold cursor-pointer hover:scale-110 transition" data-val="5" type="button">★</button>
+<input id="review-input-rating" type="hidden" value="5"/>
+</div>
+</div>
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300" for="review-input-pros">Достоинства</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="review-input-pros" placeholder="Качество фасадов, точность замера, тихие доводчики" type="text"/>
+</div>
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300" for="review-input-cons">Недостатки</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="review-input-cons" placeholder="Сборка заняла 2 дня вместо 1" type="text"/>
+</div>
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300" for="review-input-comment">Комментарий*</label>
+<textarea class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="review-input-comment" placeholder="Поделитесь вашими впечатлениями о гарнитуре и работе фабрики..." required="" rows="4"></textarea>
+</div>
+<div class="text-xs font-bold py-1 hidden text-center" id="review-form-feedback"></div>
+<button class="w-full py-4 px-6 rounded-2xl bg-luxury-gold hover:bg-luxury-gold-hover text-white font-bold text-sm transition shadow-lg flex items-center justify-center gap-2 cursor-pointer" id="review-submit-btn" type="submit">
+<i class="w-4 h-4" data-lucide="send"></i>
+<span>Опубликовать отзыв</span>
+</button>
+</form>
+</div>
+</div>
+<!-- ========================================================
+       FULLSCREEN LIGHTBOX MODAL (PHOTO VIEWER)
+       ======================================================== -->
+<div aria-labelledby="lightbox-counter" aria-modal="true" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md" id="lightbox-modal" role="dialog">
+<button aria-label="Закрыть фотографии" class="absolute top-6 right-6 p-3 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition z-10 cursor-pointer" id="lightbox-close" type="button">
+<i class="w-6 h-6" data-lucide="x"></i>
+</button>
+<button aria-label="Предыдущее фото" class="absolute left-6 top-1/2 -translate-y-1/2 p-3.5 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition z-10 cursor-pointer" id="lightbox-prev" type="button">
+<i class="w-7 h-7" data-lucide="chevron-left"></i>
+</button>
+<button aria-label="Следующее фото" class="absolute right-6 top-1/2 -translate-y-1/2 p-3.5 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 rounded-full transition z-10 cursor-pointer" id="lightbox-next" type="button">
+<i class="w-7 h-7" data-lucide="chevron-right"></i>
+</button>
+<div class="max-w-6xl max-h-[90vh] flex flex-col items-center">
+<img alt="Фото кухонного гарнитура" class="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl transition-opacity duration-200" id="lightbox-img" src=""/>
+<div class="mt-4 text-xs text-white/80 font-semibold tracking-wider bg-white/10 px-4 py-1.5 rounded-full backdrop-blur-md" id="lightbox-counter">
+        Кадр 1 из 24
+      </div>
+</div>
+</div>
+<!-- ========================================================
+       FOOTER
+       ======================================================== -->
+</main><footer class="factory-footer"><div class="factory-footer-inner">
+<div class="factory-footer-brand"><a aria-label="Пластик Кухни — главная" class="factory-brand" href="/plastik-kuhni-demo/index.html"><img alt="Пластик Кухни — фабрика кухонь на заказ" height="60" src="/plastik-kuhni-demo/assets/images/logo.svg" width="160"/></a><p>Кухни под ваш дом,<br/>привычки и ритм жизни.</p><div class="factory-socials"><a data-social="social_max" href="https://max.ru/u/f9LHodD0cOIErdrQV2a9cspww5Outjv1wJsSs37qvIvRwWIZBcXs2tvoDYM" rel="noopener noreferrer" target="_blank">MAX<span aria-hidden="true"> ↗</span></a><a data-social="social_ok" href="https://ok.ru/plastikkuhni" rel="noopener noreferrer" target="_blank">Одноклассники<span aria-hidden="true"> ↗</span></a><a data-social="social_vk" href="https://vk.com/plastikkuhni" rel="noopener noreferrer" target="_blank">ВКонтакте<span aria-hidden="true"> ↗</span></a><a data-social="social_telegram" href="https://t.me/plastickuhni" rel="noopener noreferrer" target="_blank">Telegram<span aria-hidden="true"> ↗</span></a></div></div>
+<div><h2>Проекты</h2><a href="/plastik-kuhni-demo/catalog/index.html">Каталог кухонь</a><a href="/plastik-kuhni-demo/works/index.html">Выполненные работы</a><a href="/plastik-kuhni-demo/reviews/index.html">Отзывы из соцсетей</a><a href="/plastik-kuhni-demo/calculator/index.html">Калькулятор</a></div>
+<div><h2>Материалы</h2><a href="/plastik-kuhni-demo/materials/index.html#fenix">Fenix NTM (Италия)</a><a href="/plastik-kuhni-demo/materials/index.html#alvic">Alvic Luxe (Испания)</a><a href="/plastik-kuhni-demo/materials/index.html#arpa">Arpa HPL (Италия)</a><a href="/plastik-kuhni-demo/materials/index.html#hardware">Blum &amp; Hettich</a></div>
+<div><h2>Обсудим вашу кухню</h2><a data-contact="company_phone_1" href="tel:88002009027">8 (800) 200-90-27</a><a data-contact="company_phone_2" href="tel:+79265724434">+7 (926) 572-44-34</a><a data-contact="company_email" href="mailto:info@plastik-kuhni.ru">info@plastik-kuhni.ru</a><a href="/plastik-kuhni-demo/contacts/index.html">Контакты и схема проезда ↗</a></div>
+<div class="factory-footer-bottom"><span>© 2026 Пластик Кухни. Фабрика кухонь на заказ.</span><div class="factory-footer-links"><a href="/plastik-kuhni-demo/about/index.html">О фабрике</a></div></div>
+</div></footer><script src="../assets/js/main.js"></script><script src="../assets/js/product.js"></script></body>
+</html>

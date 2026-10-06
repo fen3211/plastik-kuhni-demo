@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth theme-light" lang="ru">
+<head><script src="/plastik-kuhni-demo/assets/js/demo.js"></script>
+<link href="/plastik-kuhni-demo/assets/css/tailwind.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Интерактивный калькулятор кухни — Пластик Кухни Москва</title>
+<meta content="Пошаговый расчет стоимости кухни онлайн. Выберите материал фасадов, длину гарнитура и получите моментальный расчет со скидкой 10% и подарком." name="description"/>
+<link href="../assets/css/custom.css" rel="stylesheet"/>
+<script src="/plastik-kuhni-demo/assets/js/vendor/lucide.js"></script>
+<link href="/plastik-kuhni-demo/assets/css/layout.css" rel="stylesheet"/>
+<meta content="noindex, nofollow" name="robots"/><link href="/plastik-kuhni-demo/assets/css/demo.css" rel="stylesheet"/></head>
+<body class="bg-luxury-black text-white selection:bg-luxury-gold selection:text-white antialiased"><div class="demo-notice">Демонстрация обновления сайта · Формы работают в режиме предпросмотра</div>
+<!-- Header -->
+<header class="factory-header">
+<div class="factory-header-inner"><a aria-label="Пластик Кухни — главная" class="factory-brand" href="/plastik-kuhni-demo/index.html"><img alt="Пластик Кухни — фабрика кухонь на заказ" height="60" src="/plastik-kuhni-demo/assets/images/logo.svg" width="160"/></a>
+<nav aria-label="Главное меню" class="factory-nav"><a href="/plastik-kuhni-demo/catalog/index.html">Кухни</a><a href="/plastik-kuhni-demo/works/index.html">Наши работы</a><a href="/plastik-kuhni-demo/reviews/index.html">Отзывы</a><a href="/plastik-kuhni-demo/about/index.html">О фабрике</a><a href="/plastik-kuhni-demo/contacts/index.html">Контакты</a></nav>
+<div class="factory-header-actions"><button aria-label="Сменить тему" class="theme-toggle factory-icon-button"><i data-lucide="moon"></i></button>
+<a class="factory-header-cta" href="/plastik-kuhni-demo/calculator/index.html">Рассчитать кухню <span aria-hidden="true">↗</span></a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Открыть меню" class="factory-icon-button factory-menu-button" id="mobile-menu-btn"><i data-lucide="menu"></i></button></div>
+</div>
+<nav aria-label="Мобильное меню" class="factory-mobile-menu hidden" hidden="" id="mobile-menu"><a href="/plastik-kuhni-demo/catalog/index.html">Кухни</a><a href="/plastik-kuhni-demo/works/index.html">Наши работы</a><a href="/plastik-kuhni-demo/reviews/index.html">Отзывы</a><a href="/plastik-kuhni-demo/about/index.html">О фабрике</a><a href="/plastik-kuhni-demo/contacts/index.html">Контакты</a><a href="/plastik-kuhni-demo/calculator/index.html">Рассчитать кухню</a><div class="factory-socials"><a data-social="social_max" href="https://max.ru/u/f9LHodD0cOIErdrQV2a9cspww5Outjv1wJsSs37qvIvRwWIZBcXs2tvoDYM" rel="noopener noreferrer" target="_blank">MAX<span aria-hidden="true"> ↗</span></a><a data-social="social_ok" href="https://ok.ru/plastikkuhni" rel="noopener noreferrer" target="_blank">Одноклассники<span aria-hidden="true"> ↗</span></a><a data-social="social_vk" href="https://vk.com/plastikkuhni" rel="noopener noreferrer" target="_blank">ВКонтакте<span aria-hidden="true"> ↗</span></a><a data-social="social_telegram" href="https://t.me/plastickuhni" rel="noopener noreferrer" target="_blank">Telegram<span aria-hidden="true"> ↗</span></a></div></nav>
+</header>
+<!-- CALCULATOR SECTION -->
+<section class="py-16">
+<div class="max-w-5xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<div class="gold-badge mb-3">
+<i class="w-3.5 h-3.5" data-lucide="percent"></i>
+          Скидка 10% при онлайн-расчете
+        </div>
+<h1 class="font-display text-3xl sm:text-5xl font-bold text-white tracking-tight">
+          Калькулятор расчета стоимости кухни
+        </h1>
+<p class="text-gray-400 mt-3 text-sm sm:text-base">
+          Официальный алгоритм фабрики. Выберите тип фасадов и ширину гарнитура, чтобы узнать точную стоимость со скидкой.
+        </p>
+</div>
+<div class="glass-panel rounded-3xl p-6 sm:p-10 border border-luxury-subtle">
+<!-- Step 1: Material Type (Original site: Пленка ПВХ / Пластик / Эмаль / Массив дуба) -->
+<div class="mb-10">
+<label class="block text-sm font-bold uppercase tracking-wider text-luxury-gold mb-4">
+            1. Выберите тип и материал кухни:
+          </label>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="material-options">
+<!-- Пленка ПВХ: 25 000 руб/п.м -->
+<button class="material-btn p-5 rounded-2xl border border-white/10 bg-white/5 text-left transition" data-name="Пленка ПВХ" data-price-pm="25000">
+<div class="flex justify-between items-start mb-2">
+<span class="font-bold text-base text-white">Пленка ПВХ</span>
+<span class="text-xs font-semibold text-luxury-gold">Эконом</span>
+</div>
+<div class="text-xs font-bold text-gray-500 mb-1">25 000 ₽ / п.м</div>
+<p class="text-[11px] text-gray-400">Широкая палитра цветов, базовое решение.</p>
+</button>
+<!-- Пластик: 30 000 руб/п.м (Хит фабрики) -->
+<button class="material-btn active p-5 rounded-2xl border border-luxury-gold bg-luxury-gold/10 text-left transition" data-name="Пластик HPL / Акрил" data-price-pm="30000">
+<div class="flex justify-between items-start mb-2">
+<span class="font-bold text-base text-white">Пластик HPL</span>
+<span class="px-2 py-0.5 rounded-full bg-luxury-gold text-white text-[10px] font-bold uppercase">Хит</span>
+</div>
+<div class="text-xs font-bold text-luxury-gold mb-1">30 000 ₽ / п.м</div>
+<p class="text-[11px] text-gray-400">Термостойкий, антивандальный, 180+ текстур.</p>
+</button>
+<!-- Эмаль: 36 000 руб/п.м -->
+<button class="material-btn p-5 rounded-2xl border border-white/10 bg-white/5 text-left transition" data-name="Эмаль (Глянец / Мат)" data-price-pm="36000">
+<div class="flex justify-between items-start mb-2">
+<span class="font-bold text-base text-white">Эмаль</span>
+<span class="text-xs font-semibold text-luxury-gold">Премиум</span>
+</div>
+<div class="text-xs font-bold text-gray-500 mb-1">36 000 ₽ / п.м</div>
+<p class="text-[11px] text-gray-400">Глубокий глянец или шелковистый мат по RAL.</p>
+</button>
+<!-- Массив дуба: 60 000 руб/п.м -->
+<button class="material-btn p-5 rounded-2xl border border-white/10 bg-white/5 text-left transition" data-name="Массив дуба" data-price-pm="60000">
+<div class="flex justify-between items-start mb-2">
+<span class="font-bold text-base text-white">Массив дуба</span>
+<span class="text-xs font-semibold text-luxury-gold">Люкс</span>
+</div>
+<div class="text-xs font-bold text-gray-500 mb-1">60 000 ₽ / п.м</div>
+<p class="text-[11px] text-gray-400">Натуральное дерево, классические фасады.</p>
+</button>
+</div>
+</div>
+<!-- Step 2: Width Slider (Original site: 1.0 - 10.0 метров) -->
+<div class="mb-10">
+<div class="flex justify-between items-center mb-4">
+<label class="text-sm font-bold uppercase tracking-wider text-luxury-gold">
+              2. Ширина кухни (погонные метры):
+            </label>
+<span class="text-2xl font-display font-extrabold text-white" id="length-display">3.0 метра</span>
+</div>
+<input class="w-full h-2 rounded-lg appearance-none cursor-pointer" id="kitchen-width-slider" max="10.0" min="1.0" step="0.1" type="range" value="3.0"/>
+<div class="flex justify-between text-[11px] text-gray-500 mt-2 font-medium">
+<span>1.0 м</span>
+<span>2.5 м</span>
+<span>5.0 м</span>
+<span>7.5 м</span>
+<span>10.0 м</span>
+</div>
+</div>
+<!-- Removed redundant step 3 to strictly match original site -->
+<!-- SUMMARY CALCULATION (Exact logic of original site with -10% discount breakdown) -->
+<div class="p-6 sm:p-8 rounded-3xl bg-luxury-dark border border-luxury-gold/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center mb-6 pb-6 border-b border-luxury-subtle">
+<!-- Base Price (Strikethrough) -->
+<div>
+<div class="text-xs uppercase tracking-wider text-gray-500 mb-1">Цена без скидки:</div>
+<div class="text-2xl font-bold line-through text-gray-400" id="base-price-display">
+                90 000 ₽
+              </div>
+</div>
+<!-- Discount Minus Price (Final Price) -->
+<div>
+<div class="text-xs uppercase tracking-wider text-luxury-gold font-bold mb-1 flex items-center gap-1">
+<span>Цена со скидкой 10%:</span>
+<span class="px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-600 text-[10px] font-bold">-10%</span>
+</div>
+<div class="text-3xl sm:text-4xl font-extrabold text-luxury-gold price-value-anim" id="final-price-display">
+                81 000 ₽
+              </div>
+</div>
+<!-- Savings (You save) -->
+<div>
+<div class="text-xs uppercase tracking-wider text-gray-500 mb-1">Вы сэкономите:</div>
+<div class="text-2xl font-bold text-emerald-600" id="savings-display">
+                9 000 ₽
+              </div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="text-xs text-emerald-600 font-semibold flex items-center gap-1.5">
+<i class="w-4 h-4" data-lucide="gift"></i>
+<span>Включен подарок: Каменная мойка GranFest + бесплатный 3D-проект</span>
+</div>
+<button class="btn-primary w-full sm:w-auto py-3.5 px-8 text-sm" id="calc-open-modal-btn" type="button">
+<span>Зафиксировать расчет и скидку 10%</span>
+<i class="w-4 h-4" data-lucide="check-circle"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Calculator Lead Modal -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" id="calc-lead-modal">
+<div class="glass-panel w-full max-w-md p-6 sm:p-8 rounded-3xl border border-luxury-subtle shadow-2xl">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-luxury-subtle">
+<div>
+<h3 class="font-display text-lg font-bold text-gray-900 dark:text-white">Фиксация скидки 10%</h3>
+<span class="text-xs text-gray-400">Расчет кухни фабрики «Пластик Кухни»</span>
+</div>
+<button class="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white rounded-lg" id="calc-modal-close">
+<i class="w-5 h-5" data-lucide="x"></i>
+</button>
+</div>
+<div class="p-4 rounded-2xl bg-luxury-gold/10 border border-luxury-gold/20 mb-5 text-xs space-y-1">
+<div class="flex justify-between"><span class="text-gray-500">Материал:</span> <strong class="text-luxury-gold" id="modal-calc-material">Пластик HPL</strong></div>
+<div class="flex justify-between"><span class="text-gray-500">Длина кухни:</span> <strong id="modal-calc-width">3.0 м</strong></div>
+<div class="flex justify-between"><span class="text-gray-500">Итого со скидкой:</span> <strong class="text-luxury-gold font-bold text-sm" id="modal-calc-price">81 000 ₽</strong></div>
+</div>
+<form class="space-y-4 text-xs" id="calc-lead-form">
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300">Ваше имя*</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="calc-name" placeholder="Иван" required="" type="text"/>
+</div>
+<div>
+<label class="block font-semibold mb-1 text-gray-700 dark:text-gray-300">Контактный телефон*</label>
+<input class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-[#0D0F13] text-sm focus:outline-none focus:border-luxury-gold" id="calc-phone" placeholder="+7 (999) 000-00-00" required="" type="tel"/>
+</div>
+<div class="text-[11px] text-gray-400 flex items-center gap-2">
+<input checked="" class="rounded accent-amber-600" required="" type="checkbox"/>
+<span>Согласен на расчет в WhatsApp/звонком</span>
+</div>
+<div class="text-xs font-bold py-1 hidden" id="calc-form-feedback"></div>
+<button class="w-full py-3.5 px-6 rounded-xl bg-luxury-gold hover:bg-luxury-gold-hover text-white font-bold text-sm transition shadow-md flex items-center justify-center gap-2" id="calc-submit-btn" type="submit">
+<span>Получить расчет и подарок</span>
+<i class="w-4 h-4" data-lucide="arrow-right"></i>
+</button>
+</form>
+</div>
+</div>
+<!-- Footer -->
+<footer class="factory-footer"><div class="factory-footer-inner">
+<div class="factory-footer-brand"><a aria-label="Пластик Кухни — главная" class="factory-brand" href="/plastik-kuhni-demo/index.html"><img alt="Пластик Кухни — фабрика кухонь на заказ" height="60" src="/plastik-kuhni-demo/assets/images/logo.svg" width="160"/></a><p>Кухни под ваш дом,<br/>привычки и ритм жизни.</p><div class="factory-socials"><a data-social="social_max" href="https://max.ru/u/f9LHodD0cOIErdrQV2a9cspww5Outjv1wJsSs37qvIvRwWIZBcXs2tvoDYM" rel="noopener noreferrer" target="_blank">MAX<span aria-hidden="true"> ↗</span></a><a data-social="social_ok" href="https://ok.ru/plastikkuhni" rel="noopener noreferrer" target="_blank">Одноклассники<span aria-hidden="true"> ↗</span></a><a data-social="social_vk" href="https://vk.com/plastikkuhni" rel="noopener noreferrer" target="_blank">ВКонтакте<span aria-hidden="true"> ↗</span></a><a data-social="social_telegram" href="https://t.me/plastickuhni" rel="noopener noreferrer" target="_blank">Telegram<span aria-hidden="true"> ↗</span></a></div></div>
+<div><h2>Проекты</h2><a href="/plastik-kuhni-demo/catalog/index.html">Каталог кухонь</a><a href="/plastik-kuhni-demo/works/index.html">Выполненные работы</a><a href="/plastik-kuhni-demo/reviews/index.html">Отзывы из соцсетей</a><a href="/plastik-kuhni-demo/calculator/index.html">Калькулятор</a></div>
+<div><h2>Материалы</h2><a href="/plastik-kuhni-demo/materials/index.html#fenix">Fenix NTM (Италия)</a><a href="/plastik-kuhni-demo/materials/index.html#alvic">Alvic Luxe (Испания)</a><a href="/plastik-kuhni-demo/materials/index.html#arpa">Arpa HPL (Италия)</a><a href="/plastik-kuhni-demo/materials/index.html#hardware">Blum &amp; Hettich</a></div>
+<div><h2>Обсудим вашу кухню</h2><a data-contact="company_phone_1" href="tel:88002009027">8 (800) 200-90-27</a><a data-contact="company_phone_2" href="tel:+79265724434">+7 (926) 572-44-34</a><a data-contact="company_email" href="mailto:info@plastik-kuhni.ru">info@plastik-kuhni.ru</a><a href="/plastik-kuhni-demo/contacts/index.html">Контакты и схема проезда ↗</a></div>
+<div class="factory-footer-bottom"><span>© 2026 Пластик Кухни. Фабрика кухонь на заказ.</span><div class="factory-footer-links"><a href="/plastik-kuhni-demo/about/index.html">О фабрике</a></div></div>
+</div></footer>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/calculator.js"></script>
+<script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

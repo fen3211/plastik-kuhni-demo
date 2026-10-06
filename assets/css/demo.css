@@ -1,0 +1,9 @@
+.demo-notice{padding:8px 16px;background:#eae4d8;color:#3b362e;text-align:center;font:500 12px/1.5 Manrope,Arial,sans-serif}
+#demo-form-notice{inset:0;margin:auto;width:min(480px,calc(100% - 32px));padding:32px;border:1px solid #d9d2c6;border-radius:24px;background:#faf8f4;color:#22251f;box-shadow:0 24px 80px #0003}
+#demo-form-notice::backdrop{background:#101510a6}
+#demo-form-notice h2{margin:0 0 16px;font:700 24px/1.25 Manrope,Arial,sans-serif}
+#demo-form-notice p{margin:0 0 24px;font:400 15px/1.65 Manrope,Arial,sans-serif;color:#51554e}
+#demo-form-notice button{min-height:48px;width:100%;border:0;border-radius:12px;background:#272f25;color:#fff;font-weight:700;cursor:pointer;transition:opacity 180ms cubic-bezier(.16,1,.3,1)}
+#demo-form-notice button:hover{opacity:.86}
+#demo-form-notice button:focus-visible{outline:3px solid #a48650;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){#demo-form-notice button{transition:none}}
